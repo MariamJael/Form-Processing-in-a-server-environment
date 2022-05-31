@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Adding a Book Form</title>
+</head>
+<body>
+
+<form action="book-form.jsp">
+<fieldset>
+<legend>Input Form</legend>
+
+<br><br/>
+Book title: <input type="text" name="bookTitle"/>
+
+<br><br/>
+Author:  <input type="text" name="bookAuthor"/>
+
+<br><br/>
+ISBN:  <input type="text" name="isbn" required/>
+
+<br><br/>
+Publisher 
+<select name="publisher">
+<option>John Wiley & Sons</option>
+<option>Big Nerd Ranch</option>
+<option>Industrial Press</option>
+<option>Armond Dalton</option>
+</select>
+<br><br/>
+
+<input type="radio" name="type" value="Hardcover">Hardcover
+<br>
+<input type="radio" name="type" value="Paperback">Paperback
+
+<br><br/>
+Subject:
+<input type="checkbox" name="subject" value="Classic">Classic
+<input type="checkbox" name="subject" value="Fantasy">Fantasy
+<input type="checkbox" name="subject" value="History">History
+<input type="checkbox" name="subject" value="Horror">Horror
+
+<br><br/>
+Price: <input type="number" name="price" min=50 max=500 Step=0.01 oninvalid="setCustomValidity('Not Acceptable')" 
+		oninput="this.setCustomValidity('')"/> 
+
+
+<br><br/>
+<br><br/>
+<input type="submit" value="Add Book"/>
+
+</fieldset>
+</form>
+
+</body>
+</html>
